@@ -3,5 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Kazushi Konosu <kazushi@konosu.me>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer-core": "^1.17.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  }
 }
