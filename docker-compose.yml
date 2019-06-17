@@ -1,0 +1,8 @@
+version: "3"
+services:
+  web:
+    build: ./docker
+    command: sh -c "yarn install --production && yarn start"
+    working_dir: /app
+    volumes:
+      - ./:/app:rw

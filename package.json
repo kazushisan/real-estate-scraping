@@ -1,0 +1,7 @@
+{
+  "name": "real-estate-scraping",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kazushi Konosu <kazushi@konosu.me>",
+  "license": "MIT"
+}
