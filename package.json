@@ -5,6 +5,7 @@
   "author": "Kazushi Konosu <kazushi@konosu.me>",
   "license": "MIT",
   "dependencies": {
+    "json2csv": "^4.5.1",
     "puppeteer-core": "^1.17.0"
   },
   "devDependencies": {
