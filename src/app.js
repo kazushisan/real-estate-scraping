@@ -1,9 +1,8 @@
-import puppeteer from 'puppeteer-core'
-import fs from 'fs'
-import json2csv from 'json2csv'
-import getProperties from './getProperties'
+import puppeteer from 'puppeteer'
+import fs from 'node:fs'
+import { parse } from 'json2csv'
+import getProperties from './getProperties.js'
 
-const { parse } = json2csv
 const sleep = time => new Promise(resolve => setTimeout(resolve, time))
 
 let link =

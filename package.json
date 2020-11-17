@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "Kazushi Konosu <kazushi@konosu.me>",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "json2csv": "^5.0.5",
     "puppeteer": "^5.5.0"
