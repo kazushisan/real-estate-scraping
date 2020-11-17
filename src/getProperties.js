@@ -19,7 +19,7 @@ const getProperties = async (link, page) => {
       }
 
       const travelText = list[i].querySelectorAll(
-        '.detailnote > .detailnote-box > div'
+        '.detailnote > .detailnote-box > div',
       )[0].innerText
 
       if (!/^.*歩([0-9]+)分$/.test(travelText)) {
@@ -44,7 +44,7 @@ const getProperties = async (link, page) => {
         time,
         busTime,
         isTsukuba,
-        isKenkyuGakuen
+        isKenkyuGakuen,
       })
     }
     return result
