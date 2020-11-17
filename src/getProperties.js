@@ -1,6 +1,6 @@
 const getProperties = async (link, page) => {
   await page.goto(link)
-  const properties = await page.$$eval('div.property', list => {
+  const properties = await page.$$eval('div.property', (list) => {
     const result = []
     for (let i = 0; i < list.length; i++) {
       const price = list[i]
