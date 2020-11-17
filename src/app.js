@@ -10,10 +10,7 @@ let link =
 
 const app = async () => {
   try {
-    const browser = await puppeteer.launch({
-      executablePath: '/usr/bin/chromium-browser',
-      args: ['--no-sandbox']
-    })
+    const browser = await puppeteer.launch()
     const result = []
 
     const page = await browser.newPage()
