@@ -5,13 +5,14 @@
   "author": "Kazushi Konosu <kazushi@konosu.me>",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "lint": "eslint ./src --ext .js"
+  },
   "dependencies": {
     "json2csv": "^5.0.5",
     "puppeteer": "^5.5.0"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-eslint": "^10.1.0",
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^6.15.0",
