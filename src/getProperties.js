@@ -40,7 +40,7 @@ const getProperties = async (link, page) => {
         years: parseInt(years, 10),
         time: parseInt(time, 10),
         isOneRoom,
-        is1K
+        is1K,
       })
     }
     return result
