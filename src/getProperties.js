@@ -6,10 +6,13 @@ const getProperties = async (link, page) => {
       const price = list[i]
         .querySelector('.detailbox-property-point')
         .innerText.slice(0, -2)
-      const space = list[i]
-        .querySelectorAll('td:nth-of-type(3) > div')[1]
-        .innerText.slice(0, -2)
+
+      const thirdCol = list[i].querySelectorAll('td:nth-of-type(3) > div')
       const forthCol = list[i].querySelectorAll('td:nth-of-type(4) > div')
+
+      const space = thirdCol[1].innerText.slice(0, -2)
+      const isOneRoom = thirdCol[0].innerText === 'ワンルーム' ? 1 : 0
+      const is1K = thirdCol[0].innerText === '1K' ? 1 : 0
       const isApartment = forthCol[0].innerText === 'アパート' ? 1 : 0
       const isMansion = forthCol[0].innerText === 'マンション' ? 1 : 0
       let years = forthCol[1].innerText
@@ -28,23 +31,16 @@ const getProperties = async (link, page) => {
       }
 
       const time = travelText.replace(/^.*歩([0-9]+)分$/, '$1')
-      const busTime = /^.*バス([0-9]+)分.*$/.test(travelText)
-        ? travelText.replace(/^.*バス([0-9]+)分.*$/, '$1')
-        : '0'
-      const isTsukuba = /つくばエクスプレス\/つくば駅/.test(travelText) ? 1 : 0
-      // eslint-disable-next-line prettier/prettier
-      const isKenkyuGakuen = /つくばエクスプレス\/研究学園駅/.test(travelText) ? 1: 0
 
       result.push({
-        price,
-        space,
+        price: parseFloat(price),
+        space: parseFloat(space),
         isApartment,
         isMansion,
-        years,
-        time,
-        busTime,
-        isTsukuba,
-        isKenkyuGakuen,
+        years: parseInt(years, 10),
+        time: parseInt(time, 10),
+        isOneRoom,
+        is1K
       })
     }
     return result
